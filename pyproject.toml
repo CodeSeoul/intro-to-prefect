@@ -1,0 +1,18 @@
+[project]
+name = "intro-to-prefect"
+description = "An introductory project to Prefect"
+version = "0.1.0"
+authors = [
+    { name = "Bryan \"Beege\" Berry", email = "beege@codeseoul.org" }
+]
+dependencies = [
+    "prefect ~= 2.13.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit"
+]
+
+[project.scripts]
+pipeline = "pipeline.main:main"

@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  database:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: petstore
+    volumes:
+      - type: volume
+        source: data
+        target: /var/lib/postgresql/data
+
+volumes:
+  data:
